@@ -37,7 +37,7 @@ st.title("Russia Ukraine War - Emotion Detection Dashboard")
 st.write("This dashboard predicts the emotion behind a text based on models trained on Twitter and Reddit data.")
 
 model_selected = st.radio("Select a model:", ("Logistic Regression (Twitter)", "Logistic Regression (Reddit)"), index=1)
-user_input = st.text_area("Enter text here:")
+user_input = st.text_area("Enter text here, minimum of 10 words:")
 
 if st.button("Predict"):
     prediction, probs = predict_emotion(user_input, model_selected)
